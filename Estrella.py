@@ -5,7 +5,16 @@
    "execution_count": 1,
    "id": "cad85ad2",
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Luminosidad total del Sol: 3.5142399235508362e+22\n",
+      "Luminosidad en la secuencia principal del Sol: 3.828e+26\n"
+     ]
+    }
+   ],
    "source": [
     "import pandas as pd\n",
     "import numpy as np\n",
@@ -26,7 +35,20 @@
     "        return 4 * np.pi * self._radio**2 * self._temperatura\n",
     "\n",
     "    def calcular_luminosidad_secuencia_principal(self):\n",
-    "        return self.LSun * (self._masa / self.MSun)**3.5\n"
+    "        return self.LSun * (self._masa / self.MSun)**3.5\n",
+    "\n",
+    "def ejemplo_clase_estrella():\n",
+    "    sol = Estrella(nombre=\"Sol\", masa=1.9884e30, radio=6.957e8, temperatura=5778, distancia=0, movimiento_propio=0)\n",
+    "    # Calcular la luminosidad total y mostrarla\n",
+    "    luminosidad_total = sol.calcular_luminosidad_total()\n",
+    "    print(\"Luminosidad total del Sol:\", luminosidad_total)\n",
+    "    # Calcular la luminosidad en la secuencia principal y mostrarla\n",
+    "    luminosidad_secuencia_principal = sol.calcular_luminosidad_secuencia_principal()\n",
+    "    print(\"Luminosidad en la secuencia principal del Sol:\", luminosidad_secuencia_principal)\n",
+    "    # Llamar a la función de ejemplo\n",
+    "ejemplo_clase_estrella()\n",
+    "\n",
+    "    "
    ]
   },
   {
