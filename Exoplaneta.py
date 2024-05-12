@@ -37,7 +37,24 @@
     "            omega = 0  # Argumento del periastron\n",
     "            R_star = 1  # Radio estelar (en UA)\n",
     "            b = a * np.cos(i) / ((1 - e**2) * (R_star * (1 + e * np.sin(omega))))\n",
-    "            return b\n"
+    "            return b\n",
+    "def ejemplo_clase_exoplaneta():\n",
+    "    # Crear una instancia de la clase Exoplaneta\n",
+    "    planeta_ejemplo = Exoplaneta(nombre=\"Ejemplo\", masa=1.898e27, radio=7.149e7, anfitriona=Estrella(nombre=\"Anfitriona\", masa=2.2e30, radio=6.9634e8, temperatura=5778, distancia=0, movimiento_propio=0))\n",
+    "\n",
+    "    # Llamar al método para obtener el método de primer descubrimiento y mostrarlo\n",
+    "    metodo_descubrimiento = planeta_ejemplo.metodo_primer_descubrimiento(\"velocidad radial\")\n",
+    "    print(\"Método de primer descubrimiento del planeta de ejemplo:\", metodo_descubrimiento)\n",
+    "\n",
+    "    # Verificar si el planeta de ejemplo es similar a Tatooine\n",
+    "    similar_tatooine = planeta_ejemplo.es_similar_tatooine()\n",
+    "    if similar_tatooine:\n",
+    "        print(\"El planeta de ejemplo es similar a Tatooine.\")\n",
+    "    else:\n",
+    "        print(\"El planeta de ejemplo no es similar a Tatooine.\")\n",
+    "\n",
+    "# Llamar a la función de ejemplo\n",
+    "ejemplo_clase_exoplaneta()\n"
    ]
   },
   {
